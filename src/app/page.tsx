@@ -1,113 +1,82 @@
 import Image from "next/image";
+import logo from "../public/images/logo.png";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+    <main className="flex min-h-screen flex-col bg-black items-center p-6">
+      <header className="flex flex-row justify-between gap-20 items-center w-2/3">
+        <Image src="/images/logo.png" alt="Profile" width={80} height={80} className="rounded-full" />
+
+        <nav className="flex flex-row gap-10 text-white">
+          <a className=" rounded p-2 px-4 text-lg" href="#home">
+            Home
           </a>
+          <a className=" rounded p-2 px-4 text-lg" href="#about">
+            About
+          </a>
+          <a className="bg-sky-500 rounded p-2 px-6 text-lg" href="#contact">
+            Mulai
+          </a>
+        </nav>
+      </header>
+      <section className="flex py-20 flex-row justify-between w-2/3 ">
+        <div className="px-4">
+          <h1 className="text-white font-semibold text-4xl text-beautify py-20">
+            Dapatkan teman belajar pribadi kalian <span className="text-sky-500 block">Niko sang asisten belajar</span>
+          </h1>
+          <h1 className="text-white text-4xl text-beautify"></h1>
         </div>
-      </div>
+        <Image src="/images/hero.png" alt="Hero" width={600} height={600} />
+      </section>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      {/* FAQ */}
+      <section className=" text-gray-100 py-60 my-10 min-h-screen">
+        <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
+          <h2 className="mb-12 text-4xl font-bold leadi text-center sm:text-5xl">Frequently Asked Questions</h2>
+          <div className="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700">
+            <details>
+              <summary className="py-2 outline-none cursor-pointer focus:underline">Bagaimana cara Niko bekerja?</summary>
+              <div className="px-4 pb-4">
+                <p>
+                  You can easily place an order on our website by browsing our product catalog, selecting the items you want, and adding them to your cart.
+                  Then, proceed to checkout, where you can provide your shipping and payment information to complete the order.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary className="py-2 outline-none cursor-pointer focus:underline">Apakah Niko berbayar?</summary>
+              <div className="px-4 pb-4">
+                <p>
+                  We accept various payment methods, including credit cards, debit cards, net banking, and mobile wallet payments. You can choose the payment
+                  option that is most convenient for you during the checkout process.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary className="py-2 outline-none cursor-pointer focus:underline">Bahasa apa saja yang bisa digunakan?</summary>
+              <div className="px-4 pb-4">
+                <p>
+                  Shipping times may vary depending on your location and the shipping method chosen. Typically, orders are processed within 1-2 business days,
+                  and delivery can take 3-7 business days within India. You will receive a tracking notification once your order is shipped.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary className="py-2 outline-none cursor-pointer focus:underline">Pelajaran apa saja yang tersedia</summary>
+              <div className="px-4 pb-4">
+                <p>
+                  Yes, we have a hassle-free return policy. If you are not satisfied with your purchase, you can initiate a return within 30 days of receiving
+                  the product. Please contact our customer support at{" "}
+                  <a href="" className="underline">
+                    example@gmail.com
+                  </a>{" "}
+                  for assistance.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
